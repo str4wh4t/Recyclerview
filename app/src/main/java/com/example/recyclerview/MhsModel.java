@@ -1,4 +1,4 @@
-package com.example.belajarsqlite;
+package com.example.recyclerview;
 
 import android.os.Parcel;
 import android.os.Parcelable;

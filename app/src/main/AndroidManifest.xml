@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.belajarsqlite">
+    package="com.example.recyclerview">
 
     <application
         android:allowBackup="true"
@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CobaRecyclerView">
         <activity
-            android:name="com.example.belajarsqlite.ListMhsActivity"
+            android:name="com.example.recyclerview.ListMhsActivity"
             android:exported="true" />
         <activity
-            android:name="com.example.belajarsqlite.MainActivity"
+            android:name="com.example.recyclerview.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

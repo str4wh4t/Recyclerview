@@ -1,4 +1,4 @@
-package com.example.belajarsqlite;
+package com.example.recyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,8 +18,9 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<MhsModel> mhsList ;
     MhsModel mm ;
-    DbHelper db ;
     boolean isEdit ;
+
+    // tes
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
             btnSimpan.setText("Edit");
         }
 
-        db = new DbHelper(getApplicationContext());
 
         btnSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,19 +65,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                    boolean stts ;
+                    boolean stts = false ;
 
                     if(!isEdit){
-                        mm = new MhsModel(-1, isian_nama, isian_nim, isian_hoHp);
-                        stts = db.simpan(mm);
 
-                        edNama.setText("");
-                        edNim.setText("");
-                        edNoHp.setText("");
+
 
                     }else{
                         mm = new MhsModel(mm.getId(), isian_nama, isian_nim, isian_hoHp);
-                        stts = db.ubah(mm);
+
                     }
 
 
@@ -102,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                mhsList = db.list();
 
                 if(mhsList.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Belum ada data", Toast.LENGTH_SHORT).show();

@@ -1,4 +1,4 @@
-package com.example.belajarsqlite;
+package com.example.recyclerview;
 
 import android.content.Context;
 

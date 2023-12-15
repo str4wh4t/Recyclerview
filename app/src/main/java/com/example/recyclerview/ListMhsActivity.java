@@ -1,4 +1,4 @@
-package com.example.belajarsqlite;
+package com.example.recyclerview;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,24 +39,6 @@ public class ListMhsActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int item) {
 
-                        DbHelper db = new DbHelper(getApplicationContext());
-                        MhsModel mm = mhsList.get(position);
-
-                        switch (item){
-                            case 0:
-                                boolean stts = db.hapus(mm.getId());
-                                if(stts){
-                                    mhsAdapter.removeItem(position);
-                                    Toast.makeText(getApplicationContext(), "Data berhasil dihapus", Toast.LENGTH_SHORT).show();
-                                }
-                                break;
-                            case 1:
-                                Intent intent_main = new Intent(ListMhsActivity.this, MainActivity.class);
-                                intent_main.putExtra("mhsData", mm);
-
-                                startActivity(intent_main);
-                                break;
-                        }
                     }
                 });
                 dialog.create().show();
